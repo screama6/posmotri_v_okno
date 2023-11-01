@@ -9,7 +9,10 @@ html {
 }
 
 .page {
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   background-color: #1b1919;
@@ -53,8 +56,6 @@ ol {
   grid-template-columns: 711px auto;
   align-items: end;
   gap: 30px;
-  height: 800px;
-  padding: 133px 30px;
 }
 
 .result {
@@ -189,7 +190,6 @@ ol {
   grid-template-rows: 210px 298px;
   gap: 26px;
   width: 100%;
-  height: 100%;
 }
 
 .title {
