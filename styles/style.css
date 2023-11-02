@@ -84,10 +84,10 @@ ol {
   appearance: none;
 }
 
-.search-form__fieldset{
+.search-form__fieldset {
   display: flex;
   flex-direction: column;
-  gap:5px;
+  gap: 5px;
   border: none;
 }
 
@@ -103,10 +103,12 @@ ol {
 }
 
 .search-form__label:has(:focus-visible) {
+  outline-offset: 1px;
   outline: 1px solid #FFF;
 }
 
 .search-form__textfield {
+  appearance: none;
   width: 225px;
   border: none;
   border-top: 1px solid #FFF;
@@ -136,7 +138,7 @@ ol {
   background-color: #1B1919;
 }
 
-.search-form__checkbox[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   position: relative;
   inset: 1px;
@@ -152,9 +154,10 @@ ol {
 }
 
 .button {
-  height: 34px;
+  padding: 6px 0;
   border: 1px solid #FFF;
   color: #FFF;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 18px;
   background-color:#1B1919;
@@ -175,6 +178,7 @@ ol {
 }
 
 .button:focus-visible{
+  outline-offset: 1px;
   outline: 1px solid #FFF;
 }
 
@@ -188,12 +192,13 @@ ol {
 .content__details{
   display: grid;
   grid-template-rows: 210px 298px;
+  min-width: 415px;
   gap: 26px;
   width: 100%;
 }
 
 .title {
-  font-family: Oswald;
+  font-family: 'Oswald','Arial', sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -210,20 +215,17 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 30px;
   overflow-x: hidden;
   overflow-y: overlay;
 }
 
-/* Скрываем scrollbar для Chrome, Safari и Opera */
-.content__list::-webkit-scrollbar {
-  display: none;
+.content__list-item {
+  display: grid;
+  padding-bottom: 30px;
 }
- 
-/* Скрываем scrollbar для IE, Edge и Firefox */
-.content__list {
-  -ms-overflow-style: none;  /* IE и Edge */
-  scrollbar-width: none;  /* Firefox */
+
+.content__list-item:last-child {
+  padding-bottom: 0;
 }
 
 .content__card-link:hover {
@@ -246,6 +248,10 @@ ol {
   text-decoration: none;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -264,7 +270,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: 'Oswald','Arial', sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -281,5 +287,7 @@ ol {
 }
 
 .more-button {
-  width: 100%;
+  display: block;
+  margin: 0 auto;
+  width: 99%;
 }
