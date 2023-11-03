@@ -95,7 +95,7 @@ ol {
   font-weight: 400;
 }
 
-.search-form__label{
+.search-form__label {
   display: flex;
   gap: 5px;
   width: fit-content;
@@ -105,6 +105,10 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline-offset: 1px;
   outline: 1px solid #FFF;
+}
+
+.search-form__label:has(:active) {
+  outline: none;
 }
 
 .search-form__textfield {
